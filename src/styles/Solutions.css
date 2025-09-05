@@ -1,0 +1,186 @@
+/*
+ ==============================
+ Global Variables
+ ==============================
+*/
+:root {
+  --primary-color: #a0a0a0;
+  --secondary-color: #00bfff;
+  --text-primary: #ffffff;
+  --text-secondary: #bbb;
+  --background-dark: #000000;
+  --card-background: rgba(26, 26, 26, 0.7);
+  --border-color: rgba(136, 227, 250, 0.2);
+  --grey-border: #808080;
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  --max-width-content: 1200px;
+}
+
+/*
+ ==============================
+ General Styles
+ ==============================
+*/
+body, html {
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+  font-family: var(--font-family-sans);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/*
+ ==============================
+ Solution Page Container
+ ==============================
+*/
+.solution-page-container {
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+  background: var(--background-dark);
+  color: var(--text-primary);
+}
+
+/*
+ ==============================
+ Solution Header
+ ==============================
+*/
+.solution-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.solution-title {
+  font-size: 3.5rem;
+  font-weight: var(--font-weight-extrabold);
+  color: var(--text-primary);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-lg);
+}
+
+.solution-title .highlight {
+  color: var(--secondary-color);
+}
+
+.solution-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.solution-image:hover {
+  transform: scale(1.02);
+}
+
+/*
+ ==============================
+ Solution Content
+ ==============================
+*/
+.solution-content {
+  background: var(--card-background);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.solution-intro {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.section-divider {
+  width: 100%;
+  height: 2px;
+  background: var(--secondary-color);
+  margin: var(--spacing-lg) 0;
+  opacity: 0.5;
+}
+
+.solution-content h3 {
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.solution-features,
+.solution-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+.solution-features li,
+.solution-benefits li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+}
+
+.solution-features li::before,
+.solution-benefits li::before {
+  content: '●';
+  color: var(--secondary-color);
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+/*
+ ==============================
+ Responsive Adjustments
+ ==============================
+*/
+@media (max-width: 768px) {
+  .solution-page-container {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .solution-title {
+    font-size: 2.5rem;
+  }
+
+  .solution-image {
+    max-width: 100%;
+  }
+
+  .solution-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .solution-intro {
+    font-size: 1.1rem;
+  }
+
+  .solution-features li,
+  .solution-benefits li {
+    font-size: 1rem;
+  }
+}

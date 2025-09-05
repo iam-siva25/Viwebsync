@@ -1,0 +1,48 @@
+/* ==============================
+   Automotive About Section
+   ============================== */
+.automotive-about-section {
+    padding: 80px 0;
+    background-color: var(--background-dark);
+}
+
+.automotive-about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.automotive-about-image-container {
+    text-align: center;
+}
+
+.automotive-about-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.automotive-about-text {
+    text-align: left;
+}
+
+.automotive-about-text p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .automotive-about-grid {
+        grid-template-columns: 1fr;
+    }
+    .automotive-about-image-container {
+        order: -1;
+        margin-bottom: 30px;
+    }
+}

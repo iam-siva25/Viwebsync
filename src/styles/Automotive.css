@@ -1,0 +1,408 @@
+/* ==============================
+   Root Variables
+   ============================== */
+:root {
+    --background-dark: #121212; /* Black background for body */
+    /* Grey background for sections */
+    --text-primary: #ffffff;
+    --text-secondary: #c0c0c0;
+    --accent-green: #32cd32;
+    --accent-blue: #00bfff;
+    --border-color: #333;
+    --card-background: #1e1e1e;
+    --max-width-content: 1200px;
+    --header-height: 80px;
+    --section-gap: 60px;
+}
+
+/* ==============================
+   General Styles
+   ============================== */
+/* body {
+    background-color: var(--background-dark);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+} */
+
+/* Ensure sections have top padding to avoid header overlap and gaps between sections */
+.automotive-about-section,
+.specifications-section,
+.automotive-app-showcase,
+.key-features-section {
+    padding-top: var(--header-height);
+    margin-bottom: var(--section-gap);
+    padding: 40px 20px;
+    max-width: var(--max-width-content);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--container-grey); 
+}
+
+/* ==============================
+   Key Features Section
+   ============================== */
+.key-features-section {
+    /* Background color set in section, no need to override unless specific */
+}
+
+.content-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.features-image-container {
+    width: 45%;
+}
+
+.features-image {
+    max-width: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.features-list-container {
+    width: 50%;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.feature-checkmark {
+    color: var(--accent-blue);
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.feature-item p {
+    margin: 0;
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .features-image-container, .features-list-container {
+        width: 100%;
+    }
+}
+
+/* ==============================
+   Applications Showcase Section
+   ============================== */
+.automotive-app-showcase {
+    /* Background color set in section, no need to override unless specific */
+}
+
+.automotive-app-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.automotive-app-grid {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.automotive-app-menu-left, .automotive-app-menu-right {
+    width: 25%;
+    padding: 10px;
+}
+
+.automotive-app-item {
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.automotive-app-item:hover, .automotive-app-item.active {
+    background-color: var(--accent-blue);
+}
+
+.automotive-dot-marker {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--text-primary);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.automotive-item-label {
+    margin: 0;
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+.automotive-app-details-center {
+    width: 40%;
+    padding: 10px;
+}
+
+.automotive-detail-layout {
+    background-color: #2a2a2a;
+    height: 360px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.automotive-image-display {
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.automotive-detail-image {
+    margin-bottom: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    object-position: center;
+}
+
+.automotive-text-display {
+    margin-top: 15px;
+}
+
+.automotive-detail-text {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .automotive-app-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .automotive-app-menu-left, .automotive-app-menu-right, .automotive-app-details-center {
+        width: 100%;
+    }
+}
+
+/* ==============================
+   Automotive About Section
+   ============================== */
+.automotive-about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    /* Background color set in section */
+}
+
+.automotive-about-image-container {
+    order: -1;
+    text-align: center;
+}
+
+.automotive-about-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.automotive-about-text {
+    text-align: left;
+}
+
+.automotive-about-text p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .automotive-about-grid {
+        grid-template-columns: 1fr;
+    }
+    .automotive-about-image-container {
+        order: -1;
+        margin-bottom: 30px;
+    }
+}
+/* ==============================
+   Staggered Cards Section
+   ============================== */
+.electronic-staggered-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--background-dark);
+}
+
+.electronic-staggered-card {
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-background);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.electronic-staggered-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.electronic-staggered-card.electronic-align-left {
+    margin-right: auto;
+    align-self: flex-start;
+}
+
+.electronic-staggered-card.electronic-align-right {
+    margin-left: auto;
+    align-self: flex-end;
+}
+
+.electronic-staggered-icon-wrapper {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--accent-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.electronic-staggered-icon {
+    font-size: 2rem;
+    color: var(--accent-green);
+}
+
+.electronic-staggered-content h3 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.electronic-staggered-content p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 5px 0 0;
+}
+
+/* General section styles */
+.electronic-specifications-section,
+.electronic-about-section {
+    background-color: var(--background-dark);
+    padding: 50px 20px;
+}
+
+.electronic-content-panel {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.electronic-section-title {
+    font-size: 2rem;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.electronic-glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.animate-reveal {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==============================
+   Footer (Optional, including current date/time)
+   ============================== */
+.footer {
+    background-color: var(--background-dark);
+    text-align: center;
+    padding: 20px;
+    margin-top: var(--section-gap);
+}
+
+.footer p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Animation (if used with GSAP or CSS) */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,201 @@
+/* ==============================
+   General Page Layout & Typography
+   ============================== */
+:root {
+  --background-dark: #121212;
+  --text-primary: #ffffff;
+  --text-secondary: #c0c0c0;
+  --accent-blue: #007bff;
+  --card-background: #1a1a1a;
+  --border-color: #333;
+}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.content-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==============================
+   Hero Section
+   ============================== */
+.hero-block {
+  padding: 80px 20px;
+  background-color: var(--background-dark);
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.hero-subtext {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ==============================
+   Blog Posts Section (Grid)
+   ============================== */
+.blog-posts-section {
+  padding: 60px 0;
+}
+
+.blog-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.blog-card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+}
+
+.blog-card h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--accent-blue);
+}
+
+.blog-card-meta {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+}
+
+.blog-card p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.blog-card-tags {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.blog-tag {
+  display: inline-block;
+  background-color: #2a2a2a;
+  color: #a0a0a0;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.blog-read-more {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--accent-blue);
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.blog-read-more:hover {
+  background-color: #0056b3;
+}
+
+/* ==============================
+   CTA Section
+   ============================== */
+.contact-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-content {
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--accent-blue);
+}
+
+.section-text {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.primary-action {
+  background-color: var(--accent-blue);
+  color: var(--text-primary);
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.primary-action:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   Animations
+   ============================== */
+.animate-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: reveal 0.8s ease-out forwards;
+
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
