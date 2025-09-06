@@ -3,16 +3,16 @@ import "../../styles/Home.css";
 
 const testimonials = [
   {
-    text: "Since integrating our technology into operations, we've seen a remarkable improvement in performance and efficiency.",
-    author: "Vikraman, Agribusiness Owner"
+    "text": "By integrating LabVIEW into our hardware design process, we've drastically accelerated our prototyping cycles and improved system efficiency.",
+    "author": "Vikraman, Agribusiness Technology Manager"
   },
   {
-    text: "The insights provided allow us to make more informed decisions, leading to better resource management.",
-    author: "Priya, Manufacturing Lead"
+    "text": "The real-time data analysis and seamless hardware integration capabilities of LabVIEW give us the insights needed to optimize our designs and manage resources more effectively.",
+    "author": "Priya, Lead Systems Integrator"
   },
   {
-    text: "A great partner for innovation, they truly understand our needs and deliver exceptional solutions.",
-    author: "Ramesh, Aerospace Engineer"
+    "text": "An indispensable partner for innovation, their expertise in LabVIEW solutions allows us to develop complex hardware systems that meet our exact specifications and deliver exceptional performance.",
+    "author": "Ramesh, Aerospace Systems Architect"
   }
 ];
 
@@ -46,8 +46,8 @@ export default function ClientsSection() {
           className="testimonial-text fade-animation"
         >
           "{testimonials[index].text}"
+          <span className="testimonial-author"> - {testimonials[index].author}</span>
         </p>
-        <p className="testimonial-author">- {testimonials[index].author}</p>
       </div>
     </section>
   );

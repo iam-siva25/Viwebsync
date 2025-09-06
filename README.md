@@ -4,7 +4,7 @@ Viwebsync is a modern web app built with React for syncing and managing web cont
 
 ## 🚀 Quick Start
 
-```bash
+
 git clone https://github.com/iam-siva25/Viwebsync.git
 cd Viwebsync
 npm install

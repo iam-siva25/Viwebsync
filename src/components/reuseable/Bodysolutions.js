@@ -28,7 +28,7 @@ const Bodysolutions = () => {
     return () => clearInterval(interval); // Cleanup on unmount
   }, [products.length]);
 
-  return (
+  return ( 
     <section className="product-showcase-section">
       <h2 className="product-showcase-title">
         <span className="title-white">Our Core</span>
