@@ -140,7 +140,7 @@ function App() {
           />
 
           <Route
-          path="/checkoutsystem"
+          path="/checkoutsystems"
           element={
             <>
               <CheckoutSystemPage />

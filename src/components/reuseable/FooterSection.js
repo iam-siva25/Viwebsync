@@ -44,11 +44,13 @@ const Footer = () => {
         </div>
         
         <div className="viwebsync-footer-section viwebsync-contact-info">
-          <h4>Contact Us</h4>
-          <p>Email: info@viwebsync.com</p>
-          <p>Phone: +91 6385879906</p>
-          <p>Chennai, Tamil Nadu, India</p>
-        </div>
+  <h4>Contact Us</h4>
+  {/* CHANGE THIS LINE: */}
+  <p>Email: <a href="mailto:admin@viwebsync.com">admin@viwebsync.com</a></p>
+  {/* END OF CHANGE */}
+  <p>Phone: +91 6385879906</p>
+  <p>Chennai, Tamil Nadu, India</p>
+</div>
       </div>
       
       <div className="viwebsync-footer-bottom">

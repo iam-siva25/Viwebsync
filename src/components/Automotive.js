@@ -10,7 +10,6 @@ const Automotive = () => {
       <AutomotiveAbout />
       <AutomotiveSpecifications />
       <AutomotiveKeyApplications />
-      
       <AutomotiveKeyFeatures />
     </main>
   );
